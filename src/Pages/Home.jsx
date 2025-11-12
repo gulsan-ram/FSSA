@@ -1,7 +1,8 @@
 import React from "react";
 import bgg from "../assets/bgg.JPG";
 
-const Home = () => (
+
+const Home = () => (<>
   <header className="relative w-full h-screen flex items-center bg-black">
     {/* Background Image */}
     <img
@@ -55,7 +56,12 @@ const Home = () => (
       </div>
     </div>
   </header>
+
+  
+  
+</>
 );
+
 
 export default Home;
 

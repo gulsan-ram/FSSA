@@ -1,14 +1,17 @@
 import Home from './Pages/Home';
 import React from 'react';
 import Journey from './Pages/About/journey';
-import Programs from './Pages/programs/Udaan';
+import Wsport from './Pages/Wsport';
+import Lakshya from './Pages/programs/Lakshya';
 
 const App = () => {
   return (
     <div>
       <Home />
       <Journey/>
-      <Programs/>
+      <Wsport/>
+      <Lakshya/>
+      
     </div>
   );
 };
