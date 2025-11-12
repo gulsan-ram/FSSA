@@ -32,12 +32,12 @@ export default function Navbar() {
   ];
 
   const renderDropdown = (dropdown) => (
-    <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-20 animate-fadeIn">
+    <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-20">
       {dropdown.map((drop) => (
         <a
           key={drop.label}
           href={drop.href}
-          className="block px-4 py-2 text-sm text-gray-800 hover:bg-red-100 hover:text-red-500 transition duration-200"
+          className="block px-4 py-2 text-sm font-medium text-gray-800 hover:bg-red-100 hover:text-red-500 transition duration-200"
         >
           {drop.label}
         </a>
@@ -46,7 +46,7 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="bg-white text-gray-800 shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white text-gray-800 shadow-lg fixed w-full top-0 z-50 font-medium">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div className="flex items-center space-x-3">
@@ -68,7 +68,7 @@ export default function Navbar() {
                 {!dropdown ? (
                   <a
                     href={href}
-                    className="relative text-gray-700 hover:text-red-500 transition duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full"
+                    className="relative text-gray-700 font-semibold hover:text-red-500 transition duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {name}
                   </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
                   <>
                     <button
                       onClick={() => toggleDropdown(name)}
-                      className="flex items-center text-gray-700 hover:text-red-500 transition duration-200"
+                      className="flex items-center text-gray-700 font-semibold hover:text-red-500 transition duration-200"
                     >
                       {name}
                       <ChevronDown
@@ -119,7 +119,7 @@ export default function Navbar() {
                 {!dropdown ? (
                   <a
                     href={href}
-                    className="block px-6 py-3 text-gray-700 hover:bg-red-50 hover:text-red-500 transition"
+                    className="block px-6 py-3 text-gray-700 font-semibold hover:bg-red-50 hover:text-red-500 transition"
                   >
                     {name}
                   </a>
@@ -127,7 +127,7 @@ export default function Navbar() {
                   <>
                     <button
                       onClick={() => toggleDropdown(name)}
-                      className="w-full flex justify-between items-center px-6 py-3 text-gray-700 hover:bg-red-50 hover:text-red-500 transition"
+                      className="w-full flex justify-between items-center px-6 py-3 text-gray-700 font-semibold hover:bg-red-50 hover:text-red-500 transition"
                     >
                       {name}
                       <ChevronDown
@@ -143,7 +143,7 @@ export default function Navbar() {
                           <a
                             key={drop.label}
                             href={drop.href}
-                            className="block px-10 py-2 text-sm text-gray-700 hover:bg-red-100 hover:text-red-500 transition"
+                            className="block px-10 py-2 text-sm font-medium text-gray-700 hover:bg-red-100 hover:text-red-500 transition"
                           >
                             {drop.label}
                           </a>

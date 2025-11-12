@@ -1,1 +1,10 @@
+
 @import "tailwindcss";
+.bgimg{
+  background-image:url("./assets/bgg.JPG") ;
+   background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  width: 1500px;
+
+}
