@@ -18,7 +18,7 @@ export default function Navbar() {
         { label: "Get Involve", href: "#GetInvolve" },
       ],
     },
-    { name: "Program", href: "#" },
+    { name: "Program", href: "#program" },
     {
       name: "About",
       dropdown: [
@@ -50,11 +50,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div className="flex items-center space-x-3">
-          <img
-            className="h-12 sm:h-14 md:h-16"
-            src="./src/assets/logo (2).png"
-            alt="Logo"
-          />
+          <div className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-xl">FS</span>
+          </div>
           <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-red-500 cursor-pointer">
             FSSA
           </h1>
@@ -95,7 +93,7 @@ export default function Navbar() {
           {/* Donate Button */}
           <a
             href="#donate"
-            className="ml-4 bg-red-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:shadow-lg hover:scale-105 transition-all duration-200"
+            className="ml-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 hover:shadow-lg hover:scale-105 transition-all duration-200"
           >
             Donate
           </a>
@@ -159,7 +157,7 @@ export default function Navbar() {
             <li className="px-6 py-4">
               <a
                 href="#donate"
-                className="block text-center bg-red-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:scale-105 transition-all duration-200 shadow-md"
+                className="block text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 hover:scale-105 transition-all duration-200 shadow-md"
               >
                 Donate
               </a>
