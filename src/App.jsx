@@ -1,20 +1,19 @@
+
+import Navbar from './Navbar';
 import Home from './Pages/Home';
 import React from 'react';
-import Journey from './Pages/About/journey';
-import Wsport from './Pages/Wsport';
-import Lakshya from './Pages/programs/Lakshya';
+import Wsport from './Pages/Wsport'
 
 const App = () => {
   return (
-    <div>
+  <div className="w-full overflow-x-hidden">
+      <Navbar />
       <Home />
-      <Journey/>
-      <Wsport/>
-      <Lakshya/>
-      
+      <Wsport />
     </div>
-  );
+  )
 };
 
 export default App;
+
 
