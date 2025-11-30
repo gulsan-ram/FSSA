@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@layer utilities {
+  /* hidden before entering screen */
+  .fadeUp-start {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+
+  /* visible when scrolled */
+  .animate-fadeUp {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+@layer utilities {
+  .input {
+    @apply w-full bg-orange-50 border border-orange-200 px-4 py-3 rounded-lg focus:ring-2 focus:ring-[#e09604] outline-none;
+  }
+
+  .cta-btn {
+    @apply bg-[#e09604] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#d18600] transition;
+  }
+}
+@layer utilities {
+  .donate-input {
+    @apply w-full bg-orange-50 border border-orange-200 px-4 py-3 rounded-lg 
+           focus:ring-2 focus:ring-[#e09604] outline-none;
+  }
+}
