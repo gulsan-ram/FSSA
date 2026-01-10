@@ -4,7 +4,8 @@ import { Instagram ,Facebook ,Linkedin ,Youtube } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="bg-[#D5EBDA] min-h-screen pt-24 pb-16 px-6 md:px-12 lg:px-24 font-[Poppins]">
+    <div className="
+     bg-[#FFF7ED] min-h-screen pt-24 pb-16 px-6 md:px-12 lg:px-24 font-[Poppins]">
 
 
       {/* Hero Section */}
@@ -85,16 +86,16 @@ export default function Contact() {
           <div className="bg-white shadow-md rounded-xl p-6 md:p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Direct Contact</h2>
 
-            <p className="text-gray-800"><strong>📍 Address:</strong><br />
+            <p className="text-gray-800"><strong> Address:</strong><br />
               Future Star Sports Academy, Baripada, Mayurbhanj, Odisha
             </p>
 
             <p className="text-gray-800 mt-3">
-              <strong>📞 Phone:</strong> +91- 89176 44680
+              <strong> Phone:</strong> +91- 89176 44680
             </p>
 
             <p className="text-gray-800 mt-3">
-              <strong>📧 Email:</strong> future.ssa19@gmail.com
+              <strong> Email:</strong> future.ssa19@gmail.com
             </p>
 
             <div className="mt-6">

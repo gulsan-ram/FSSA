@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GetInvolved() {
   return (
-    <div className="bg-[#FFE5EC] py-20 border-t">
+    <div className=" bg-[#FFF7ED] py-20 border-t">
 
       
       {/* HERO SECTION */}

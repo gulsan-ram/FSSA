@@ -26,7 +26,7 @@ import GetInvolved from "./Pages/GetInvolved";
 import Donate from "./Pages/Donate";
 import Contact from "./Pages/Contact";
 
-import Media from "./Pages/Media";   
+import Gallery from "./Pages/Gallery";   
 import Reports from "./Pages/Reports"; 
 
 
@@ -59,12 +59,12 @@ function App() {
 
         {/* Others */}
         <Route path="/impact" element={<Impact />} />
+        <Route path="/gallery" element={<Gallery/>} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* Phase 2 */}
-        <Route path="/media" element={<Media />} />
         <Route path="/reports" element={<Reports />} />
       </Routes>
 
@@ -75,4 +75,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,121 +1,136 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "./../assets/fssa logo.jpeg";
+import logo from "../assets/fssa logo.jpeg";
+
+const NAV_ITEMS = [
+  { label: "Home", path: "/" },
+  { label: "About us", path: "/about-fssa" },
+  { label: "Programs", path: "/programs" },
+  { label: "Impact", path: "/impact" },
+  { label: "Gallery", path: "/gallery" },
+  { label: "Get Involved", path: "/get-involved" },
+  { label: "Contact", path: "/contact" },
+  { label: "Donate", path: "/donate", isCTA: true },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const navItems = [
-    { label: "Home", path: "/" },
-    { label: "About FSSA", path: "/about-fssa" },
-    { label: "Programs", path: "/programs" },
-    { label: "Impact", path: "/impact" },
-    { label: "Get Involved", path: "/get-involved" },
-    { label: "Contact", path: "/contact" },
-    { label: "Donate", path: "/donate" } 
-  ];
+  // Lock background scroll when menu is open (mobile UX polish)
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-2xl shadow-lg border-b border-gray-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
-
-        {/* LOGO SECTION */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 group" onClick={() => setOpen(false)}>
+    <header className="fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+      <nav
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+        aria-label="Primary navigation"
+      >
+        {/* LOGO */}
+        <Link
+          to="/"
+          className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-md"
+          onClick={() => setOpen(false)}
+        >
           <img
             src={logo}
-            alt="Future Star Sports Academy"
-            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover shadow-lg ring-2 ring-orange-200 group-hover:ring-orange-500 group-hover:scale-110 transition-all duration-300"
+            alt="Future Star Sports Academy logo – non profit sports organisation in Odisha"
+            className="h-11 w-11 rounded-full object-cover ring-2 ring-orange-200"
+            loading="eager"
           />
-          <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 group-hover:text-orange-600 transition-colors duration-300 hidden sm:block">
+          <span className="hidden sm:block font-bold text-gray-900 text-lg">
             Future Star Sports Academy
           </span>
-          <span className="font-bold text-sm text-gray-900 group-hover:text-orange-600 transition-colors duration-300 sm:hidden">
+          <span className="sm:hidden font-bold text-gray-900 text-sm">
             FSSA
           </span>
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-
-          {/* PILL MENU */}
-          <nav className="flex items-center gap-1 xl:gap-2 bg-gradient-to-r from-gray-100/80 to-gray-200/80 px-4 py-2.5 rounded-full backdrop-blur-xl shadow-inner border border-gray-300/30">
-            {navItems
-              .filter((item) => item.label !== "Donate")
-              .map((item) => (
+        <div className="hidden lg:flex items-center gap-6">
+          <ul className="flex items-center gap-1 bg-gray-100/80 px-3 py-2 rounded-full border border-gray-300/40">
+            {NAV_ITEMS.filter(item => !item.isCTA).map(item => (
+              <li key={item.path}>
                 <NavLink
-                  key={item.path}
                   to={item.path}
                   className={({ isActive }) =>
                     `
-                      px-4 xl:px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap
-                      ${
-                        isActive
-                          ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md scale-105"
-                          : "text-gray-700 hover:bg-orange-500 hover:text-white hover:scale-105"
-                      }
-                    `
+                    px-4 py-2 text-sm font-semibold rounded-full
+                    transition-colors transition-transform duration-200
+                    focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500
+                    ${
+                      isActive
+                        ? "bg-orange-600 text-white shadow-sm"
+                        : "text-gray-700 hover:bg-orange-500 hover:text-white"
+                    }
+                  `
                   }
                 >
                   {item.label}
                 </NavLink>
-              ))}
-          </nav>
+              </li>
+            ))}
+          </ul>
 
-          {/* DONATE BUTTON */}
+          {/* DONATE CTA */}
           <Link
             to="/donate"
-            className="px-6 xl:px-8 py-2.5 rounded-full bg-gradient-to-r from-orange-600 to-orange-700 text-white font-bold shadow-lg hover:shadow-xl hover:from-orange-700 hover:to-orange-800 hover:scale-105 transition-all duration-300 whitespace-nowrap"
+            className="px-6 py-2.5 rounded-full bg-orange-600 text-white font-bold shadow-md
+                       hover:bg-orange-700 transition-colors
+                       focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
             Donate Now
           </Link>
         </div>
 
-        {/* MOBILE MENU ICON (Hamburger) */}
-        <button 
-          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className="lg:hidden p-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen(prev => !prev)}
         >
-          {open ? (
-            <X size={28} className="text-gray-800" />
-          ) : (
-            <Menu size={28} className="text-gray-800" />
-          )}
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
-      </div>
+      </nav>
 
-      {/* MOBILE MENU DROPDOWN */}
+      {/* MOBILE MENU */}
       <div
-        className={`lg:hidden bg-white/95 backdrop-blur-2xl shadow-2xl border-t border-gray-200/50 transition-all duration-300 ease-in-out overflow-hidden ${
-          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        id="mobile-menu"
+        className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
+          open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+        } bg-white border-t border-gray-200`}
       >
-        <div className="flex flex-col gap-2 px-4 py-4">
-
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `
-                  w-full px-5 py-3.5 rounded-xl text-base font-semibold transition-all duration-300
+        <ul className="flex flex-col gap-2 px-4 py-4">
+          {NAV_ITEMS.map(item => (
+            <li key={item.path}>
+              <NavLink
+                to={item.path}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `
+                  block w-full px-5 py-3 rounded-xl text-base font-semibold
+                  transition-colors duration-200
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500
                   ${
-                    isActive
-                      ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg scale-[1.02]"
-                      : "text-gray-700 bg-gray-50 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:shadow-md"
+                    item.isCTA
+                      ? "bg-orange-600 text-white text-center shadow-md"
+                      : isActive
+                      ? "bg-orange-500 text-white"
+                      : "bg-gray-50 text-gray-800 hover:bg-orange-500 hover:text-white"
                   }
                 `
-              }
-            >
-              {item.label}
-            </NavLink>
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
           ))}
-
-        </div>
+        </ul>
       </div>
     </header>
   );
 }
-

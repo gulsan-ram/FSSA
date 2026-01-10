@@ -74,23 +74,6 @@ export default function Udaan() {
               <li>Improved classroom participation and attendance reported by teachers.</li>
               <li>Equal participation of girls and boys across all activities.</li>
             </ul>
-
-            <div className="pt-4 space-y-4 border-t">
-              <blockquote className="text-gray-700 italic">
-                “I feel shy to speak in front of others. When Parbati didi first came to our school and asked me to join the playground, I felt very happy. Now I play every week with my friends and don’t feel scared anymore.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Girl Student</p>
-
-              <blockquote className="text-gray-700 italic">
-                “At first, I thought sports would waste study time. But when I started playing with the children and attending sessions, I felt the same joy they do. Now I see them listening better and coming to school on time.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Teacher</p>
-
-              <blockquote className="text-gray-700 italic">
-                “Earlier my son never shared what happened in school. Now he tells me about the sports sessions, how he played, and how much he enjoyed it.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Parent</p>
-            </div>
           </div>
         </div>
       </div>

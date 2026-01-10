@@ -77,26 +77,6 @@ export default function Lakshya() {
               <li>Improved strength, discipline, and confidence among rural athletes.</li>
               <li>Greater participation of girls in competitive sports.</li>
             </ul>
-
-            <div className="pt-4 space-y-4 border-t">
-              <blockquote className="text-gray-700 italic">
-                “I used to play barefoot and never imagined going for a district match. 
-                Because of Laksha training, I got selected for the district team.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Young Athlete</p>
-
-              <blockquote className="text-gray-700 italic">
-                “Children here have strength and energy but no opportunity. Through Laksha, 
-                they finally get structured training and motivation.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Coach</p>
-
-              <blockquote className="text-gray-700 italic">
-                “My daughter wakes up early every morning to attend Laksha sessions. 
-                I have never seen her so focused and confident.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Parent</p>
-            </div>
           </div>
 
         </div>

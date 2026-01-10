@@ -28,3 +28,20 @@
            focus:ring-2 focus:ring-[#e09604] outline-none;
   }
 }
+.swiper-pagination {
+  bottom: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f2a900;
+  opacity: 1;
+  width: 14px;
+  height: 14px;
+}

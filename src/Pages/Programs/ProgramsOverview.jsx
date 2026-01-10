@@ -151,7 +151,7 @@ export default function ProgramsOverview() {
       </section>
 
       {/* IMPACT SECTION */}
-      <section className="bg-[#FFE5EC] py-20 border-t">
+      <section className=" bg-[#FFF7ED]  py-20 border-t">
         <div className="max-w-7xl mx-auto px-6">
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
@@ -215,7 +215,9 @@ export default function ProgramsOverview() {
 
     </div>
   );
-}
+} 
+
+
 
 
 

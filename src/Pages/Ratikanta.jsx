@@ -12,7 +12,7 @@ export default function Ratikanta() {
       {/* Image Section */}
       <div className="max-w-4xl mx-auto mt-10">
         <img
-          src="/Images/ratinkanta.jpg"
+          src="/Images/ratikanta.jpg"
           alt="Ratinkanta"
           className="w-full h-[420px] object-cover rounded-2xl shadow-lg"
         />

@@ -18,19 +18,12 @@ export default function Impact() {
       link: "/parbati-story",
     },
     {
-      name: "Ratikanta Hembram",
+      name: "Ratikanta Hembram & sana paikaray",
       prog: "Lakshya",
       text: "Ratikanta Hembram has got the opportunity to train at High Performance Center Bhubaneswar for swimming.",
       img: "/Images/Ratikanta.jpg",
       link: "/Ratikanta",
-    },
-    {
-      name: "Sana Paikaray",
-      prog: "Lakshya",
-      text: "Sana Paikaray has got the opportunity to train at High Performance Center Bhubaneswar for swimming.",
-      img: "/Images/Ratikanta.jpg",
-      link: "/Sanap",
-    },
+    }, 
   ];
 
   return (

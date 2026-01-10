@@ -1,0 +1,9 @@
+$(document).ajaxStart(function () {
+	$(".spacer").html('<img src="'+centralisedHub+'images/progressbar.gif" border="0" />').show();   
+	
+}).ajaxStop(function () {
+	$(".spacer").html('').show(''); 
+	if(($(".er_alert2").length>0 && $.trim($(".er_alert2").text())!='' && $(".er_alert2").text()!='&nbsp;') || ($(".invalid-feedback").length>0 && $.trim($(".invalid-feedback").text())!='' && $(".invalid-feedback").text()!='&nbsp;'))  {
+		$(".spacer").html('<span class="er_alert1">One or more error(s) found in page</span>').show(''); 
+	}
+});  

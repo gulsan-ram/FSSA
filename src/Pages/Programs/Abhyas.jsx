@@ -80,26 +80,6 @@ export default function Abhyas() {
               <li>Improved access to quality sports infrastructure for youth.</li>
               <li>Financial support for promising athletes through subsidized training.</li>
             </ul>
-
-            <div className="pt-4 space-y-4 border-t">
-              <blockquote className="text-gray-700 italic">
-                “Earlier, my son had nowhere to practice regularly. Now, with Abhyas, he gets proper
-                training and guidance at an affordable cost.”
-              </blockquote>
-              <p className="text-sm font-semibold text-blue-800">— Parent</p>
-
-              <blockquote className="text-gray-700 italic">
-                “Thanks to the subsidized programs, girls from our community can now train and 
-                participate in competitions with confidence.”
-              </blockquote>
-              <p className="text-sm font-semibold text-blue-800">— Community Coach</p>
-
-              <blockquote className="text-gray-700 italic">
-                “The Pay & Play model makes sports accessible while ensuring sustainability for
-                grassroots programs.”
-              </blockquote>
-              <p className="text-sm font-semibold text-blue-800">— FSSA Mentor</p>
-            </div>
           </div>
         </div>
       </div>

@@ -21,84 +21,87 @@ export default function Aarambh() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-orange-700">
-          PROJECT AARAMBH: WHERE EVERY CHILD'S PLAY BEGINS
+          Aarambh: Early Play and Community Confidence
         </h2>
 
+        {/* Intro */}
         <p className="text-gray-700 leading-relaxed mb-10">
-          Aarambh is FSSA’s community sports program that helps rural and tribal villages
-          build a culture of daily play and inclusion. It turns open spaces into structured
-          sports centers run by local youth, ensuring that children — especially girls — can
-          learn, play, and grow with confidence.
+          Aarambh brings safe and joyful play spaces to communities where children
+          have limited access to sports. We run three Aarambh centers in Jharkhand,
+          where trained youth mentors guide daily play sessions. Through regular
+          play, children build confidence, trust in themselves, and a strong sense
+          of belonging within their community.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Left Box - How Aarambh Works */}
+          {/* Left Section */}
           <div className="space-y-6">
             <div className="p-6 rounded-xl shadow-md border bg-white hover:shadow-lg transition">
               <h3 className="font-bold text-lg text-orange-700 mb-3">
-                Community Sports Centers
+                Safe Community Play Spaces
               </h3>
               <p className="text-gray-700">
-                Local grounds revived and run by Aarambh Mitras (trained village youth).
+                Open village grounds are transformed into safe, inclusive, and
+                welcoming play spaces for children.
               </p>
             </div>
 
             <div className="p-6 rounded-xl shadow-md border bg-white hover:shadow-lg transition">
               <h3 className="font-bold text-lg text-orange-700 mb-3">
-                Structured Play Sessions
+                Guided Daily Play Sessions
               </h3>
               <p className="text-gray-700">
-                Children play 5–6 days a week in games like Kho-Kho, Kabaddi, and Football with structured curriculum.
+                Trained youth mentors conduct daily sessions that focus on fun,
+                participation, and movement-based learning.
               </p>
             </div>
 
             <div className="p-6 rounded-xl shadow-md border bg-white hover:shadow-lg transition">
               <h3 className="font-bold text-lg text-orange-700 mb-3">
-                Life Skills and Inclusion
+                Confidence Through Play
               </h3>
               <p className="text-gray-700">
-                Sessions include teamwork, gender inclusion, reflection, and confidence-building.
+                Children learn to move freely, trust themselves, and gain
+                confidence through structured play.
               </p>
             </div>
 
             <div className="p-6 rounded-xl shadow-md border bg-white hover:shadow-lg transition">
               <h3 className="font-bold text-lg text-orange-700 mb-3">
-                Local Leadership and Events
+                Community Belonging
               </h3>
               <p className="text-gray-700">
-                Monthly Khel Melas bring families and panchayats together to celebrate sport.
+                Aarambh strengthens community bonds by bringing children,
+                families, and mentors together through sport.
               </p>
             </div>
           </div>
 
-          {/* Right Box - Impact */}
+          {/* Right Section - Impact */}
           <div className="p-6 rounded-xl shadow-md border bg-white space-y-4 hover:shadow-lg transition">
-            <h3 className="text-xl font-bold mb-3 text-orange-700">Impact at a Glance</h3>
+            <h3 className="text-xl font-bold mb-3 text-orange-700">
+              Impact at a Glance
+            </h3>
 
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>200+ children playing regularly across Aarambh centers.</li>
-              <li>50% girls participation ensuring inclusion.</li>
-              <li>3 sports centers in Bhuli with safe play spaces.</li>
-              <li>3 active village sports committees.</li>
-              <li>Strong parent participation in events.</li>
-              <li>20+ promising athletes selected for advanced training.</li>
+              <li>3 Aarambh centers running across Jharkhand.</li>
+              <li>200+ children participating in regular play.</li>
+              <li>Daily sessions led by trained youth mentors.</li>
+              <li>Improved confidence and participation among girls.</li>
+              <li>Stronger community engagement around sport.</li>
             </ul>
 
             <div className="pt-4 space-y-4 border-t">
               <blockquote className="text-gray-700 italic">
-                “Before Aarambh, I played only when no one was watching. Now I captain my school team.”
+                “Aarambh helped me believe in myself. Playing every day makes me
+                feel confident and happy.”
               </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Girl Participant</p>
+              <p className="text-sm font-semibold text-orange-700">
+                — sandhyarani
+              </p>
 
-              <blockquote className="text-gray-700 italic">
-                “At first, I was worried about my daughter playing outside. Today, I stand in the front row cheering for her.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— Parent</p>
-
-              <blockquote className="text-gray-700 italic">
-                “Sports has brought our village together. When children play, the community feels proud.”
-              </blockquote>
-              <p className="text-sm font-semibold text-orange-700">— PRI Member</p>
+              
+              
             </div>
           </div>
         </div>
