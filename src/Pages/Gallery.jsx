@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../components/SEO";
 
 export default function Gallery() {
   const allImages = [
@@ -18,7 +19,6 @@ export default function Gallery() {
     "/Images/gallery12.JPG",
     "/Images/gallery13.jpeg",
     "/Images/gallery14.JPG",
-    "/Images/gallery13.jpeg",
     "/Images/gallery66.jpeg",
     "/Images/gallerychampion.jpeg",
     "/Images/gallery55.jpeg",
@@ -32,7 +32,6 @@ export default function Gallery() {
     "/Images/gallery44.jpeg",
     "/Images/gallery100.jpeg",
     "/Images/gallery22.jpeg",
-    "/Images/gallery99.jpeg",
     "/Images/girls.jpg",
     "/Images/lakshi.jpg",
     "/Images/Lakshya.jpeg",
@@ -42,62 +41,76 @@ export default function Gallery() {
     "/Images/media5.jpeg",
     "/Images/playing.jpeg",
     "/Images/independence.jpeg",
-    "/Images/fssa3.jpg",
-    "/Images/Archery.jpg",
     "/Images/team.jpeg",
     "/Images/DSC_0400.JPG",
     "/Images/Maharaja.jpeg",
     "/Images/DSC_0424.JPG",
-    
   ];
 
-  const [visibleCount, setVisibleCount] = useState(8); // show 8 images first
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const showMore = () => setVisibleCount(allImages.length);
-  const showLess = () => setVisibleCount(8); // go back to 8 images
+  const showLess = () => setVisibleCount(8);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-32 pb-10 px-5">
+    <>
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Gallery | Future Star Sports Academy"
+        description="Explore moments from training, competitions, and community sports initiatives at Future Star Sports Academy."
+        canonical="https://futurestarsportsacademy.org/gallery"
+        image="/Images/Lakshya.jpeg"
+      />
 
-    
-      <h1 className="text-center text-4xl font-extrabold text-orange-600 mb-10 tracking-wide">
-        Gallery
-      </h1>
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-32 pb-10 px-5">
 
-      {/* IMAGE GRID */}
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {allImages.slice(0, visibleCount).map((img, index) => (
-          <div
-            key={index}
-            className="group rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src={img}
-              alt="Gallery"
-              className="w-full h-64 object-cover rounded-2xl group-hover:scale-110 transition-all duration-500"
-            />
-          </div>
-        ))}
+        {/* PAGE HEADING */}
+        <h1 className="text-center text-4xl font-extrabold text-orange-600 mb-10 tracking-wide">
+          Gallery
+        </h1>
+
+        {/* ================= IMAGE GRID ================= */}
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {allImages.slice(0, visibleCount).map((img, index) => (
+            <div
+              key={index}
+              className="group rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white
+                         hover:shadow-2xl transition-all duration-300"
+            >
+              <img
+                src={img}
+                alt="Future Star Sports Academy training and events"
+                className="w-full h-64 object-cover rounded-2xl
+                           group-hover:scale-110 transition-all duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* ================= BUTTONS ================= */}
+        <div className="flex justify-center mt-10">
+          {visibleCount === 8 ? (
+            <button
+              onClick={showMore}
+              className="px-8 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl shadow
+                         hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+            >
+              View More
+            </button>
+          ) : (
+            <button
+              onClick={showLess}
+              className="px-8 py-3 text-lg font-semibold bg-red-600 text-white rounded-xl shadow
+                         hover:bg-red-700 hover:scale-105 transition-all duration-300"
+            >
+              Show Less
+            </button>
+          )}
+        </div>
       </div>
-
-      {/* BUTTONS */}
-      <div className="flex justify-center mt-10">
-        {visibleCount === 8 ? (
-          <button
-            onClick={showMore}
-            className="px-8 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 hover:scale-105 transition-all duration-300"
-          >
-            View More
-          </button>
-        ) : (
-          <button
-            onClick={showLess}
-            className="px-8 py-3 text-lg font-semibold bg-red-600 text-white rounded-xl shadow hover:bg-red-700 hover:scale-105 transition-all duration-300"
-          >
-            Show Less
-          </button>
-        )}
-      </div>
-    </div>
+    </>
   );
 }
+

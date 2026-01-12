@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO"; // ✅ ADD THIS
+
 import Team from "./Team";
 import Journey from "./Journey";
 import Recognistion from "./Recognistion";
 import Partners from "./Partners";
-
-
-
 
 // IMAGE IMPORTS (BEST PRACTICE)
 import heroImage from "/src/assets/udaan.jpeg";
@@ -17,6 +16,14 @@ import work3 from "/src/assets/parbati.jpg";
 export default function AboutFssa() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <SEO
+        title="About Us | Future Star Sports Academy"
+        description="Learn about Future Star Sports Academy, a not-for-profit organisation empowering children and communities through grassroots sports development across Odisha and Jharkhand."
+        canonical="https://futurestarsportsacademy.org/about-fssa"
+        image="/Images/Lakshya.webp"
+      />
+
       {/* ================= HERO SECTION ================= */}
       <section
         aria-label="About Future Star Sports Academy"
@@ -28,6 +35,7 @@ export default function AboutFssa() {
           alt="Children training at Future Star Sports Academy"
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
         />
 
         {/* Overlay */}
@@ -41,10 +49,6 @@ export default function AboutFssa() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl text-center"
           >
-            <p className="uppercase tracking-widest text-sm text-orange-400 mb-4">
-            
-            </p>
-
             <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-6xl leading-tight drop-shadow-xl">
               Building the Future of Indian Sports
             </h1>
@@ -127,6 +131,8 @@ export default function AboutFssa() {
                   src={img}
                   alt="FSSA community sports program"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             ))}
@@ -134,14 +140,11 @@ export default function AboutFssa() {
         </div>
       </section>
 
-      {/* ================= JOURNEY / TEAM / PARTNERS ================= */}
-      
+      {/* ================= OTHER SECTIONS ================= */}
       <Team />
       <Journey />
-      <Recognistion/>
+      <Recognistion />
       <Partners />
-    
-
     </>
   );
 }
