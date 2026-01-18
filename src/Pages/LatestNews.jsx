@@ -3,8 +3,12 @@ import { ArrowUpRight, Calendar } from "lucide-react";
 const latestNewsData = {
   featured: {
     title: "Rohit Kumar Marndi Shines at SGFI U-17 National Archery Championship",
-    description:
-      "Representing Odisha at the 69th SGFI U-17 National Archery Championship in Ranchi, Rohit Kumar Marndi secured an outstanding 2nd place overall with a score of 690.",
+    description: `A historic start to the year.
+
+Rohit Kumar Marandi delivers a standout performance at the 69th SGFI U-17 National Archery Championship 2026, clinching 3 Gold and 1 Silver medals on the national stage in Hotwar, Ranchi (Jharkhand).
+
+His consistency and composure on the shooting line bring pride to Odisha and mark a defining milestone for Future Star Sports Academy.
+A strong beginning. A focused journey ahead.`,
     date: "5–10 January 2026",
     category: "National Achievement",
     image: "/Images/Rohit.jpeg",
@@ -27,11 +31,11 @@ const latestNewsData = {
       image: "/Images/Georgida.JPG",
     },
     {
-     title: "Sandhyarani Tudu Selected for India Senior Women’s Team – Asia Rugby Emirates 7s Series 2025",
-     date: "2025",
-     image: "/Images/sandhya.jpeg",
-   },
-
+      title:
+        "Sandhyarani Tudu Selected for India Senior Women’s Team – Asia Rugby Emirates 7s Series 2025",
+      date: "2025",
+      image: "/Images/sandhya.jpeg",
+    },
   ],
 };
 
@@ -64,10 +68,8 @@ export default function LatestNews() {
             className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
-          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-          {/* Content */}
           <div className="absolute bottom-0 p-10 text-white">
             <span className="inline-block mb-4 px-4 py-1 text-xs font-semibold rounded-full bg-orange-600">
               {latestNewsData.featured.category}
@@ -77,7 +79,7 @@ export default function LatestNews() {
               {latestNewsData.featured.title}
             </h3>
 
-            <p className="text-sm text-gray-200 max-w-xl mb-6">
+            <p className="text-sm text-gray-200 max-w-xl mb-6 whitespace-pre-line">
               {latestNewsData.featured.description}
             </p>
 
