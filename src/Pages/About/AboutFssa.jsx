@@ -6,12 +6,12 @@ import Team from "./Team";
 import Journey from "./Journey";
 import Recognistion from "./Recognistion";
 import Partners from "./Partners";
+import Sports from "./Sports";
+import Ourwork from "./Ourwork";
 
 // IMAGE IMPORTS (BEST PRACTICE)
 import heroImage from "/src/assets/udaan.jpeg";
-import work1 from "/src/assets/sandhya.jpeg";
-import work2 from "/src/assets/sunita.jpg";
-import work3 from "/src/assets/parbati.jpg";
+
 
 export default function AboutFssa() {
   return (
@@ -106,43 +106,11 @@ export default function AboutFssa() {
         </div>
       </section>
 
-      {/* ================= WORK SECTION ================= */}
-      <section className="bg-white py-20 px-4 sm:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.h3
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center text-3xl md:text-4xl font-bold text-[#d97706] mb-12"
-          >
-            Our Work in Action
-          </motion.h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {[work1, work2, work3].map((img, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="rounded-2xl overflow-hidden shadow-lg group"
-              >
-                <img
-                  src={img}
-                  alt="FSSA community sports program"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ================= OTHER SECTIONS ================= */}
       <Team />
+      <Sports/>
       <Journey />
+      <Ourwork/>
       <Recognistion />
       <Partners />
     </>
